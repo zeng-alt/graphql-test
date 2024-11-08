@@ -1,0 +1,35 @@
+type Query {
+    findAllUsers(userInput: UsersInput): [Users]
+}
+
+input AddressInput{
+    id: ID,
+    country: String
+    province: String
+    city: String
+
+}
+
+input UsersInput{
+    id: ID,
+    name: String,
+    password: String
+    phone: String
+    address: AddressInput
+}
+
+type Address{
+    id: ID,
+    country: String
+    province: String
+    city: String
+
+}
+
+type Users{
+    id: ID,
+    name: String,
+    password: String
+    phone: String
+    address: Address
+}
